@@ -73,18 +73,69 @@
   margin-right: 200px;
 }
 
+.main {
+  margin-top: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main .first-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 250px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .first-row h2 {
+  margin-bottom: 50px;
+}
+
+.main .first-row blockquote {
+  position: relative;
+  line-height: 2em;
+  border-bottom: 1px solid #bbbbbb;
+  padding: 10px 0;
+  margin-bottom: 50px;
+}
+
+.main .first-row blockquote p {
+  color: #bbbbbb;
+}
+
+.main .first-row blockquote cite {
+  font-weight: bold;
+}
+
+.main .first-row blockquote:before {
+  content: "\201c";
+  position: absolute;
+  color: #bbbbbb;
+  font-size: 60px;
+  left: -10%;
+}
+
 @media (max-width: 580px) {
-  ul {
+  .nav > ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .nav > ul li:last-child {
+    margin-right: 50px;
   }
   .header .header-main {
     display: -webkit-box;

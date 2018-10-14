@@ -62,13 +62,55 @@ $text-color-main:#d6d6d6;
     }
     
 }
+.main{
+    margin-top: 250px;
+    display:flex;
+    justify-content: space-around;
+    
+        .first-row{
+            display:flex;
+            width:250px;
+            flex-direction: column;
+            h2{
+                margin-bottom: 50px;
+            }
+            blockquote{
+                position: relative;
+                line-height:2em;
+                border-bottom: 1px solid #bbbbbb;
+                padding:10px 0;
+                margin-bottom:50px;
+                p{
+                    
+                    color:#bbbbbb;
+                }
+                cite{
+                    font-weight: bold;
+                    
+                }
+                &:before{
+                    content: "\201c";
+                    position: absolute;
+                    color:#bbbbbb;
+                    font-size: 60px;
+                    left:-10%;
+
+                }
+            }
+        }
+}
 
 @media (max-width: 580px) {
     
-    ul{
+  .nav>ul{
         display:flex;
-        justify-content: flex-end;
+        align-items: flex-end;
+        
         flex-direction: column;
+        li:last-child{
+            margin-right:50px;
+        }
+        
     }
     
     .header{
@@ -76,6 +118,7 @@ $text-color-main:#d6d6d6;
             display:flex;
             flex-direction: column;
             justify-content: center;
+            
             text-align: center;
            
             align-items: center;
